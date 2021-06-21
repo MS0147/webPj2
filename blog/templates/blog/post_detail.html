@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+​
+{% block content %}
+    <div class="card mb-4">
+        {% if post.published_date %}
+            <div class="small text-muted">{{ post.published_date }}</div>
+        {% endif %}
+        <h2 class="card-title h4">{{ post.title }}</h2>
+        <p class="card-text">{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endblock %}

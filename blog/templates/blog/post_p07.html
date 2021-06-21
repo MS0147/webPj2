@@ -1,0 +1,40 @@
+<!-- Author : kiokahn -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <div class="page-header"><h1><a href="/">Django Girls blog</a></h1></div>
+  <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstraptheme.min.css">
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+
+
+<body>
+  <div class="content container">
+    <div class="row">
+    <div class="col-md-8">
+
+    {% for post in posts %}
+    <div class="post">
+    <div class="date">
+      <p>published: {{ post.published_date }}</p>
+      </div>
+      <h1><a href="">{{ post.title }}</a></h1>
+      <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
+
+    </div>
+    </div>
+  </div>
+
+
+  <hr width=90%></hr>
+  <img src="{% static "imgFile/butterfly.jpg" %}">
+  <br>asdfadsfsa
+  <video src="{% static 'video/Heavy Rotation_AKB48 [Music Box].mp4' %}" alt="My image">
+
+</body>
+</html>

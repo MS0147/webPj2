@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+​
+{% block content %}
+    <div class="card mb-4">
+        {% if post.published_date %}
+            <div class="small text-muted">{{ post.published_date }}</div>
+        {% endif %}
+        <h2 class="card-title h4">{{ post.title }}</h2>
+        <p class="card-text">{{ post.text|linebreaksbr }}</p>
+        <img class="card-img-top" src="{% static 'imgFile/STFT.png' %}">
+    </div>
+{% endblock %}

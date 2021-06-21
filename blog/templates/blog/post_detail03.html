@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 32dc6f6ffce41b32d168b73a120362080949034d
+​
+{% block content %}
+    <div class="card mb-4">
+        {% if post.published_date %}
+            <div class="small text-muted">{{ post.published_date }}</div>
+        {% endif %}
+        <h2 class="card-title h4">{{ post.title }}</h2>
+        <p class="card-text">{{ post.text|linebreaksbr }}</p>
+<<<<<<< HEAD
+        <img class="card-img-top" src="{% static 'imgFile/butterfly.jpg' %}">
+=======
+        <img class="card-img-top" src="{% static 'imgFile/butterfly.jpg' %}" alt="My Image">
+>>>>>>> 32dc6f6ffce41b32d168b73a120362080949034d
+    </div>
+{% endblock %}
